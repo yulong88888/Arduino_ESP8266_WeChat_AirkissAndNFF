@@ -9,11 +9,11 @@
 
 # 技术测试截图
 1. Airkiss微信页面由jssdk掉起（自己写js调用微信，拉起配网页面）
-<img src="./img/airkiss.png" width="240" height="320" alt=" 图片不见了"/>
+<img src="./img/airkiss.png" width="320" height="480" alt=" 图片不见了"/>
 2. 微信NFF局域网发现（自己写js调用微信，等待微信调用js结果）
-![Image text](./img/nff.png)
+<img src="./img/nff.png" width="320" height="480" alt=" 图片不见了"/>
 3. 调试时控制台数据
-![Image text](./img/pc.jpg)
+<img src="./img/pc.jpg" width="320" height="480" alt=" 图片不见了"/>
 
 
 # 参考文献
