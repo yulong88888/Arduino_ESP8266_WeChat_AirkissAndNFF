@@ -7,14 +7,15 @@
 2. 硬件NodeMCU
 
 # 技术测试截图
-1. Airkiss微信页面由jssdk掉起（自己写js调用微信，拉起配网页面）
-<img src="./img/airkiss.png" width="320" height="480" alt=" 图片不见了"/>
+1. Airkiss微信页面由jssdk调起（自己写js调用微信，调起配网页面）
+<img src="./img/airkiss.png" width="240" height="510" alt="图片不见了"/>
 2. 微信NFF局域网发现（自己写js调用微信，等待微信调用js结果）
-<img src="./img/nff.png" width="320" height="480" alt=" 图片不见了"/>
+<img src="./img/nff.png" width="240" height="510" alt="图片不见了"/>
 3. 调试时控制台数据
-<img src="./img/pc.jpg" width="320" height="480" alt=" 图片不见了"/>
+<img src="./img/pc.jpg" width="240" height="510" alt="图片不见了"/>
 
 
 # 参考文献
 1. 微信硬件云 https://iot.weixin.qq.com/wiki/new/index.html
-2. 微信NFF http://wiki.jackslab.org/ESP8266_AirKiss_NFF
+2. 微信NFF(1) http://wiki.jackslab.org/ESP8266_AirKiss_NFF
+3. 微信NFF(2) http://wiki.jackslab.org/index.php?title=ESP8266_AirKiss_NFF&diff=prev&oldid=4958
