@@ -1,8 +1,8 @@
 #include "netconfig.h"
 
-char* DEVICE_TYPE = "gh_5e8661030bb8";
+String DEVICE_TYPE = "gh_5e8661030bb8";
 //char* DEVICE_ID = "gh_5e8661030bb8_e282ca678250674b";
-char* DEVICE_ID = "666";
+String DEVICE_ID = "4Dclass_WifiModule_";
 
 /**
    初始化提示灯和连接上一次wifi
@@ -11,6 +11,8 @@ void initNetConfig() {
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(2, true);
   WiFi.begin();
+  //初始化设备ID
+  DEVICE_ID = DEVICE_ID + WiFi.softAPmacAddress().c_str();
   Serial.println("");
 }
 
@@ -73,6 +75,13 @@ bool deleteConfig() {
   ESP.restart();
 }
 
+/**
+   获取mac地址
+*/
+String getMacAddress() {
+  return DEVICE_ID;
+}
+
 //==================================================================================================
 WiFiUDP udp;
 
@@ -88,6 +97,9 @@ const airkiss_config_t airkissConf = {
   0
 };
 
+/**
+   开启微信局域网发现
+*/
 void startDiscover() {
   udp.begin(DEFAULT_LAN_PORT);
 
@@ -109,9 +121,11 @@ void startDiscover() {
         //接收到发现设备请求数据包
         case AIRKISS_LAN_SSDP_REQ:
           Serial.println("--->>> find device");
+          Serial.println(DEVICE_TYPE);
+          Serial.println(DEVICE_ID);
           lan_buf_len = sizeof(lan_buf);
           //打包数据
-          packret = airkiss_lan_pack(AIRKISS_LAN_SSDP_RESP_CMD, DEVICE_TYPE, DEVICE_ID, 0, 0, lan_buf, &lan_buf_len, &airkissConf);
+          packret = airkiss_lan_pack(AIRKISS_LAN_SSDP_RESP_CMD, (char *)DEVICE_TYPE.c_str(), (char *)DEVICE_ID.c_str(), 0, 0, lan_buf, &lan_buf_len, &airkissConf);
           if (packret != AIRKISS_LAN_PAKE_READY) {
             Serial.println("pack lan packet error");
             return;

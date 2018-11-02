@@ -5,8 +5,8 @@ void setup() {
   initNetConfig();
   if (!checkConnect()) {
     startAirkiss();
-
 //    startDiscover();
+
   }
 }
 

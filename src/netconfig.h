@@ -13,6 +13,8 @@ bool checkConnect();
 bool startAirkiss();
 bool deleteConfig();
 
+String getMacAddress();
+
 void startDiscover();
 
 #endif
