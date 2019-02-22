@@ -6,6 +6,9 @@
 1. 基于[Arduino Esp8266](https://github.com/esp8266/Arduino)固件开发，版本2.4.2
 2. 硬件NodeMCU
 
+# 技术测试视频
+http://v.youku.com/v_show/id_XNDA2Nzg5NTg4NA==.html?spm=a2h3j.8428770.3416059.1
+
 # 技术测试截图
 1. Airkiss微信页面由jssdk调起（自己写js调用微信，调起配网页面）
 <img src="./img/airkiss.png" width="240" height="510" alt="图片不见了"/>
